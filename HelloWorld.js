@@ -1,15 +1,12 @@
-console.log("Hello World")
-const http = require('http');
+console.log("Hello Node JS");
 
-const hostname = '127.0.0.1';
-const port = 3000;
+require("./Sum");
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+const addFunction=require("./Add");
+const sum=addFunction(5,5)
+const sum1=addFunction(4,5)
+console.log(sum);
+console.log(sum1);
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+
+
