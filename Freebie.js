@@ -1,6 +1,6 @@
 class Freebies{
-    serveFreebies(kurtas){
-        if(dress === "Kurtas"){
+    serveFreebies(size){
+        if(size === "large"){
             console.log("Serving Freebies for ordering kurtas")
         }
     }

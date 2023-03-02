@@ -1,28 +1,31 @@
-//  const EventEmitter = require("node:events")
-
-//  const emitter = new EventEmitter()
-
-//  emitter.on("ordering-dress",(size,dress)=>{
-//     console.log(`order received! packing a ${dress} in ${size} size packing for shipping`);
-//  });
- 
-//  emitter.on("order-dress",(dress) =>{
-//     if(dress==="Kurta"){
-//        console.log("Sending Freebies")
-//     }
-//  });
-//  emitter.emit("ordering-dress","XL","Kurta");
-
-const dressShop =  require("./Shop");
+const DressShop =  require("./DressShop");
 const Freebies = require("./Freebie")
 
-const dressShop = new dressShop();
-const Freebie = new Freebies();
+const dressShop = new DressShop();
+const freebies = new Freebies();
 
-dressShop.on("order-dress",(size,dress)=>{
+dressShop.on("order",(size,dress)=>{
     console.log(`order received! packing a ${dress} in ${size} size packing for shipping`);
-    Freebie.serveFreebies(dress);
+    freebies.serveFreebies(size);
+});
 
-dressShop.order("XL","Kurtas");
+dressShop.order("large","kurtas");
 dressShop.displayOrderNumber();
 
+// const EventEmitter = require("node:events")
+
+// const emitter = new EventEmitter()
+
+// emitter.on("order-dress",(size,dress)=>{
+//    console.log(`order received! packing a ${dress} in ${size} size packing for shipping`);
+// });
+
+// emitter.on("order-dress",(size) =>{
+//    if(size==="large"){
+//       console.log("Sending freebies ");
+//    }
+// });
+
+// console.log("Do work before event occurs in the system")
+// console.log("-------------------------------------------------")
+// emitter.emit("order-dress","large","Kurta");

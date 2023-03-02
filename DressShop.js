@@ -1,6 +1,6 @@
 const EventEmitter = require("node:events")
 
-class dressShop extends EventEmitter{
+class DressShop extends EventEmitter{
     constructor() {
         super();
         this.orderNumber = 0;
@@ -8,7 +8,7 @@ class dressShop extends EventEmitter{
 
     order(){
         this.orderNumber++;
-        this.emit("order-dress",size,dress);
+        this.emit("order",size,dress);
     }
 
     displayOrderNumber(){
@@ -16,4 +16,4 @@ class dressShop extends EventEmitter{
     }
 }
 
-module.exports = dressShop;
+module.exports = DressShop;
