@@ -1,4 +1,4 @@
-const fs=require("node:fs/promises");
+const fs=require("node:fs");
 
 // fs.readFile("file.txt","utf-8")
 // .then((data)=>console.log(data))
