@@ -6,9 +6,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-// define a function that handles user input
 const handleInput = (input) => {
-  // perform some action based on the user input
   console.log(`You entered: ${input}`);
 };
 
