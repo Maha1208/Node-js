@@ -1,9 +1,4 @@
 const fs=require("node:fs");
-
-// fs.readFile("file.txt","utf-8")
-// .then((data)=>console.log(data))
-// .catch((error)=>console.log(error));
-
 async function readFile()
 {
     try
